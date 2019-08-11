@@ -1,24 +1,37 @@
 {% extends "home/base.html" %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'university/css/style.css' %}"/>
+<!--<link rel="stylesheet" href="{% static 'university/css/style.css' %}"/> -->
 {% block content %}
- <section class="section-bg">
-      <div class="container">
-        <header class="section-header">
+<style>
+  body{
+    background-color: white;
+  }
+
+  img{
+    height: auto;
+    width: 150px;
+  }
+  h1, .msg{
+    text-align: center;
+  }
+  
+</style>
+<br/>
+<br/>
+  <div class="container">
           <h1>South African Universities</h1>
-          <p>Choose the best institution to quick start your careers.</p>
-          <p></p>
-        </header>
-        <div class="flex wrap skills">
-        {% for u in university %}
-          <div class="card">
+          <p class="msg">Choose the best institution to quick start your careers.</p>
+          <div class="row align-items-start">
+              {% for u in university %}
+     <div class="col">
+        <h5>{{ u.name}}</h5>
             <img src="{{ u.logo.url }}" alt="">
-            <h2>{{ u.name}}</h2>
-          </div>
-          {% endfor %}
+  
         </div>
+        {% endfor %}
+      </div>
       </div>
 
-    </section>
+ 
 {% endblock content %}
