@@ -1,7 +1,7 @@
 from django.db import models
+from django.urls import reverse
 from university .validators import image_validation_extension
 
-# Create your models here.
 #landing page image models
 class Carousel(models.Model):
     heading = models.CharField(max_length=500)
@@ -20,6 +20,7 @@ class Carousel(models.Model):
 class Headline(models.Model):
     heading = models.CharField(max_length=100)
     image = models.ImageField(upload_to='home/feautured/',validators=[image_validation_extension])
+    sub_content= models.CharField(max_length=300)
     content = models.TextField()
     buttonAction = models.CharField(max_length=100)
 
@@ -27,7 +28,7 @@ class Headline(models.Model):
         return reverse('home:index.html')
 
     def __str__(self):
-        return f"{self.heading}"
+        return f"{self.heading},{self.image}"
 
 #main content feature article (first one)
 class FirstFeautured(models.Model):

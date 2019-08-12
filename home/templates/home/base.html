@@ -17,7 +17,11 @@
     <style>
     
     footer{
-      background-color: red;
+      background-color: black;
+       position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
     }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -151,7 +155,7 @@ body {
           <a class="nav-link" href="{% url 'guidance:guidance' %}">Career Guidance</a>
         </li>
          <li class="nav-item active">
-          <a class="nav-link" href="{% url 'university:university' %}">Find University | College</a>
+          <a class="nav-link" href="{% url 'university:university' %}">Find Universities</a>
         </li>
          <li class="nav-item active">
           <a class="nav-link" href="{% url 'contact:answer' %}">FAQs</a>
@@ -168,8 +172,7 @@ body {
 {%block footer %}
  <!-- FOOTER -->
   <footer class="container-fluid">
-    <li class="nav-item active">
-          <a class="nav-link" href="{% url 'about:about' %}">About Us</a>
+    <li class="nav-item active"><a class="nav-link" href="{% url 'about:about' %}">About Us</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="{% url 'contact:contact' %}">Contact Us</a>

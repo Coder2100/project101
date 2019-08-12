@@ -27,7 +27,7 @@ html {
   }
 }
 
-.card {
+#card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -62,17 +62,27 @@ html {
 }
 img{
      border-radius: 50%;
+    
+}
+#img-profile{
+   width:50%;
+   margin-left:25%;
+   height:35%;
+}
+#name{
+  text-align:center;
 }
 </style>
-<br>
+<br><br>
 <div class="container">
+<h2>This project was made possible by collaboration of these human beings:) </h2><br><br>
 <div class="row">
   <div class="column">
   {% for creator in creators%}
-    <div class="card">
-      <img src="{{creator.photo.url}}" alt="Jane" style="width:100%">
-      <div class="container">
-        <h2>{{creator.name}} {{creator.surname}}</h2>
+    <div id="card" class="container">
+     <h2 id="name">{{creator.name}} {{creator.surname}}</h2>
+      <img id="img-profile"src="{{creator.photo.url}}" alt="Jane">
+      <div class="container"><br>
         <p class="title">{{creator.qualification}}</p>
       <a href="{{creator.twitter}}"> <i class="fa fa-twitter"> </a></i>Twitter
         <p><a href="{{creator.github}}"><i class="fa fa-github"></i></a> Github</p>
