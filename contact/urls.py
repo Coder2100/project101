@@ -4,10 +4,11 @@ from django.urls import path, include
 from  contact import views
 
 #import contact view
-from  .views import contact
+from  .views import contact, answer
 
 app_name = 'contact'
 
 urlpatterns = [
     path('contact', views.contact, name='contact'),
+    path('answer', views.answer, name='answer'),
 ]

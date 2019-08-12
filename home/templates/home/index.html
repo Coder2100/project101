@@ -1,6 +1,16 @@
 {% extends "home/base.html" %}
 {% load static %}
 {% block content %}
+<style>
+ a{
+     color: white;
+ }
+ a:hover{
+     text-decoration: none;
+     color: white;
+ }
+
+</style>
 <main role="main">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -10,6 +20,8 @@
       <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
         {% for slide in slides %}
@@ -109,6 +121,12 @@
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
+    <h1>Project Creators</h1>
+    <p>Chad</p>
+    <p>Rusty</p>
+    <p>Zukile</p>
+    <p>Hasan</p>
+    <p>Themba</p>
    
   </div><!-- /.container -->
 </main>

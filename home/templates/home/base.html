@@ -15,6 +15,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 {% block styles %}
     <style>
+    
+    footer{
+      background-color: red;
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -148,6 +152,9 @@ body {
         </li>
          <li class="nav-item active">
           <a class="nav-link" href="{% url 'university:university' %}">Find University | College</a>
+        </li>
+         <li class="nav-item active">
+          <a class="nav-link" href="{% url 'contact:answer' %}">FAQs</a>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
