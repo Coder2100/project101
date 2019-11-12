@@ -6,9 +6,12 @@ verify_ssl = true
 [dev-packages]
 bandit = "*"
 pylint = "*"
+autopep8 = "*"
 
 [packages]
 virtualenv = "*"
+django = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
